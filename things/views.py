@@ -10,4 +10,4 @@ def sign_up(request):
 
 def home(request):
     form = ThingForm()
-    return render(request, 'things_form.html', {'form': form})
+    return render(request, 'home.html', {'form': form})
