@@ -16,7 +16,7 @@ class ThingForm(forms.ModelForm):
     name = forms.CharField(
         label='name',
         validators=[RegexValidator(
-            regex=r'^.*{0,35}$',
+            regex=r'^{0,35}$',
             message='Maximum length is 35.'
             )]
     )
@@ -24,7 +24,7 @@ class ThingForm(forms.ModelForm):
     description = forms.CharField(
         label='description',
         validators=[RegexValidator(
-            regex=r'^.*{0,120}$',
+            regex=r'^{0,120}$',
             message='Description can be blank and up to 120 characters.'
             )]
     )
