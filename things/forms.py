@@ -33,7 +33,7 @@ class ThingForm(forms.ModelForm):
         label='quantity',
         validators=[MinValueValidator(0),MaxValueValidator(50),
             RegexValidator(
-            regex=r'/^(?:[1-9]|[1-4][0-9]|50)$/',
+            regex=r'^(?:[0-9]|[1-4][0-9]|50)$',
             message='Number should be between 0 and 50.'
             )]
     )
