@@ -1,0 +1,12 @@
+<html>
+<head>
+  <title>Things</title>
+</head>
+  <body>
+    <h1>Things form</h1>
+    <form action="{% url 'things_form' %}" method="post">
+      {% csrf_token %}
+      {{ form.as_p  }}
+      <input type="submit" value="Things form">
+  </body>
+</html>
