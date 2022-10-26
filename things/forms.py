@@ -13,27 +13,7 @@ class ThingForm(forms.ModelForm):
         'quantity' : forms.NumberInput()
         }
 
-    name = forms.CharField(
-        label='name',
-        validators=[RegexValidator(
-            message='Maximum length is 35.'
-            )]
-    )
-
-    description = forms.CharField(
-        label='description',
-        validators=[RegexValidator(
-            message='Description can be blank and up to 120 characters.'
-            )]
-    )
-
-    quantity = forms.IntegerField(
-        label='quantity',
-        validators=[MinValueValidator(0),MaxValueValidator(50),
-            RegexValidator(
-            message='Number should be between 0 and 50.'
-            )]
-    )
+    
 
 
 class SignUpForm(forms.ModelForm):
